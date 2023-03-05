@@ -2,7 +2,7 @@
 
 :root {
   --bodyFonts: 'Josefin Sans', sans-serif;
-  --pinkColor: #F14D5D;
+  --pinkColor: #5557F3;
   --titleColor: #000000;
   --bodyColor: #666666;
   --lightblueColor: #8D99FF;
@@ -81,8 +81,12 @@ hr {
   transform: translateX(-45%) translateY(0) scale(1);
   transform-origin: bottom center;
 }
+.btn-success {
+  background-color: #F96B6A !important;
+  border-color: #F96B6A !important;
+}
 .featured-area {
-  background-color: #F6F6F6;
+  background-color: #EDEFF9;
 }
 .featured-tab-area .tabs {
   margin: 0;
@@ -100,8 +104,9 @@ hr {
   position: relative;
   color: var(--titleColor);
   padding: 13px 26px 10px;
-  background-color: #E5E5E5;
+  background-color: #fff;
   border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .featured-tab-area .tabs li.active a {
   background-color: var(--pinkColor);
@@ -125,10 +130,14 @@ hr {
   margin-bottom: 30px;
   background-color: var(--whiteColor);
   border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+
 .featured-item .featured-item-img {
   position: relative;
   z-index: 1;
+  transition: 0.3s linear;
+  overflow: hidden;
 }
 .featured-item .featured-item-img a {
   display: block;
@@ -137,7 +146,13 @@ hr {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border: 4px solid var(--whiteColor);
+  transition: 0.3s linear;
 }
+
+.featured-item .featured-item-img a img:hover {
+  scale: 1.08;
+} 
+
 .featured-item .content {
   padding: 20px 15px;
 }
@@ -148,6 +163,7 @@ hr {
   color: var(--titleColor);
   -webkit-transition: var(--transition);
   transition: var(--transition);
+  font-weight: bold;
 }
 .featured-item .content .content-in {
   display: flex;
@@ -178,6 +194,9 @@ hr {
 }
 .featured-tab-area .tabs li {
   margin-right: 5px;
+}
+#staticBackdropLabel {
+  font-weight: bold;
 }
 /* responsive css */
 @media only screen and (max-width: 767px) {
